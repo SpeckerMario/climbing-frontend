@@ -1,0 +1,18 @@
+<table class="table">
+    <thead class ="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Grad</th>
+            <th>Geschafft</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempMR of moonboardRoutes">
+            <td>{{tempMR.routeName}}</td>
+            <td>{{tempMR.routeGrade}}</td>
+            <td>{{true == tempMR.isRouteDone ? 'Yes' : 'No' }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
