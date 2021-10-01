@@ -45,6 +45,24 @@
     padding-right: 10%;
 }
  
+.content{
+  background-color: #40a4e3;
+    min-height: 800px;
+}
+
+
+#main-grid{
+  display: inline-grid;
+  min-height: 800px;
+  grid-template-columns: repeat(12, minmax(10px, 500px));
+}
+
+.button{
+  
+  
+}
+
+
 
 @media (min-width: 700px) {
     .main-header {
