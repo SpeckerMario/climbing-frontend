@@ -10,6 +10,8 @@ import { MoonboardRouteService } from 'src/app/services/moonboard-route.service'
 export class MoonboardRouteListComponent implements OnInit {
 
   moonboardRoutes!: MoonboardRoute[];
+  displayedColumns: string[] = ['routeName', 'routeGrade'];
+  clickedRows = new Set<MoonboardRoute>()
 
   constructor(private moonboardRouteService : MoonboardRouteService) { }
 

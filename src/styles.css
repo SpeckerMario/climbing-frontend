@@ -52,15 +52,13 @@
 
 
 #main-grid{
-  display: inline-grid;
+  display: grid;
   min-height: 800px;
   grid-template-columns: repeat(12, minmax(10px, 500px));
 }
 
-.button{
-  
-  
-}
+
+
 
 
 
