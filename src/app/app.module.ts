@@ -5,16 +5,17 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 
 import { AppComponent } from './app.component';
-import { MoonboardRouteListComponent } from './components/moonboard-route-list/moonboard-route-list.component';
-import { MoonboardRouteService } from './services/moonboard-route.service';
-import { Routes, RouterModule} from '@angular/router'
+import { Routes, RouterModule} from '@angular/router';
+import { MoonboordFieldListComponent } from './components/moonboord-field-list/moonboord-field-list.component'
+import { MoonboardFieldService } from './services/moonboard-field.service';
+import { MoonboardRouteMenuComponent } from './components/moonboard-route-menu/moonboard-route-menu.component';
 
 const routes: Routes = [
-  {path: 'moonboard-routes/:id', component: MoonboardRouteListComponent},
-  {path: 'moonboard-routes', component: MoonboardRouteListComponent},
-  {path: 'moonboard-fields', component: MoonboardRouteListComponent},
-  {path: '', redirectTo:'/moonboard-routes', pathMatch:'full'},
-  {path: '**', redirectTo:'/moonboard-routes', pathMatch:'full'}
+  {path: 'moonboard-routes/:id', component: MoonboordFieldListComponent},
+  {path: 'moonboard-routes', component: MoonboordFieldListComponent},
+  
+ // {path: '', redirectTo:'/moonboard-routes', pathMatch:'full'},
+ // {path: '**', redirectTo:'/moonboard-routes', pathMatch:'full'}
 ];
 
 
@@ -22,7 +23,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    MoonboardRouteListComponent,
+    MoonboardRouteMenuComponent,
+    MoonboordFieldListComponent,
+    MoonboardRouteMenuComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -32,7 +35,7 @@ const routes: Routes = [
     MatTableModule,
     
   ],
-  providers: [MoonboardRouteService],
+  providers: [MoonboardFieldService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

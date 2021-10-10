@@ -12,18 +12,12 @@
   </header>
   <div class="left-side">
 
-    <router-outlet></router-outlet>
-   
+    <app-moonboard-route-menu></app-moonboard-route-menu>
   </div>
   <div class="content">
-    <div id="main-grid">
-      <div *ngFor="let index of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]">
 
-        <button class="buttonMoonboard" id="index" ng-click="IdChange()">
-          Click to Change ID
-        </button>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
+
   </div>
   <div class="right-side">Advertising</div>
   <footer class="main-footer">The footer</footer>
